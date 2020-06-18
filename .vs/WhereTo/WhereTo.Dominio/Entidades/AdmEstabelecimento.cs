@@ -12,6 +12,6 @@ namespace WhereTo.Dominio.Entidades
         public string NomeAdm { get; set; }
         public string TelefonePrincipal { get; set; }
         public string TelefoneSecundario { get; set; } 
-        public LocalEstabelecimento CEPEstabelecimento { get; set; }
+        public LocalEstabelecimento EstabelecimentoID { get; set; }
     }
 }

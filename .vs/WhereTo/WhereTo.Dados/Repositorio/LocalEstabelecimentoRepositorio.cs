@@ -9,13 +9,20 @@ namespace WhereTo.Dados.Repositorio
 {
     public class LocalEstabelecimentoRepositorio : RepositorioBase<AdmEstabelecimento>
     {
-        public IEnumerable<LocalEstabelecimento> EstabelecimentoID()
+        public IEnumerable<LocalEstabelecimento> NomeEstabelecimento()
         {
             return Contexto
                 .LocalEstabelecimento
-                .Where(f => f.EstabelecimentoID == null);
+                .Where(f => f.NomeEstabelecimento == null);
         }
 
+        public IEnumerable<LocalEstabelecimento> CEPEstabelecimento()
+        {
+            return Contexto
+                .LocalEstabelecimento
+                .Where(f => f.CEPEstabelecimento == null);
+        }
+        
         public IEnumerable<LocalEstabelecimento> RuaEstabelecimento()
         {
             return Contexto
@@ -27,7 +34,7 @@ namespace WhereTo.Dados.Repositorio
         {
             return Contexto
                 .LocalEstabelecimento
-                .Where(f => f.NumeroEstabelecimento == null);
+                .Where(f => f.NumeroEstabelecimento == 0);
         }
 
         public IEnumerable<LocalEstabelecimento> BairroEstabelecimento()
@@ -49,6 +56,11 @@ namespace WhereTo.Dados.Repositorio
             return Contexto
                 .LocalEstabelecimento
                 .Where(f => f.PaisEstabelecimento == null);
+        }
+
+        public void Adicionar(LocalEstabelecimento entidade)
+        {
+            throw new NotImplementedException();
         }
     }
 }

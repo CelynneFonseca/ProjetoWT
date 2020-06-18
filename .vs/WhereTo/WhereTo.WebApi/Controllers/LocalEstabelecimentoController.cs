@@ -23,7 +23,7 @@ namespace WhereTo.WebApi.Controllers
         [HttpGet]
         public IEnumerable<LocalEstabelecimento> ListarTodos()
         {
-            return localEstabelecimentoServico.CEPEstabelecimento();
+            return localEstabelecimentoServico.NomeEstabelecimento();
         }
 
         [HttpPost]

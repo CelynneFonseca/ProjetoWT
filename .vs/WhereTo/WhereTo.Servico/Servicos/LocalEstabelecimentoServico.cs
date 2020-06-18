@@ -24,6 +24,12 @@ namespace WhereTo.Servico.Servicos
 
             try
             {
+                if (entidade.NomeEstabelecimento.Length < 4)
+                    notificationResult.Add(new NotificationError("Nome do Estabelecimento Inválido", NotificationErrorType.BUSINESS_RULES));
+
+                if (entidade.CEPEstabelecimento.Length < 5)
+                    notificationResult.Add(new NotificationError("CEP inválido", NotificationErrorType.BUSINESS_RULES));
+
                 if (entidade.RuaEstabelecimento.Length < 4)
                     notificationResult.Add(new NotificationError("Nome da Rua Inválido", NotificationErrorType.BUSINESS_RULES));
 
@@ -61,10 +67,16 @@ namespace WhereTo.Servico.Servicos
             return "";
         }
 
-        public IEnumerable<LocalEstabelecimento> EstabelecimentoID()
+        public IEnumerable<LocalEstabelecimento> NomeEstabelecimento()
         {
-            return _localestabelecimentoRepositorio.EstabelecimentoID();
+            return _localestabelecimentoRepositorio.NomeEstabelecimento();
         }
+
+        public IEnumerable<LocalEstabelecimento> CEPEstabelecimento()
+        {
+            return _localestabelecimentoRepositorio.CEPEstabelecimento();
+        }
+
 
         public IEnumerable<LocalEstabelecimento> RuaEstabelecimento()
         {

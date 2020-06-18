@@ -24,9 +24,6 @@ namespace WhereTo.Servico.Servicos
 
             try
             {
-                if (entidade.NomeEstabelecimento.Length < 2)
-                    notificationResult.Add(new NotificationError("Nome de estabelecimento inválido", NotificationErrorType.BUSINESS_RULES));
-
                 /* ---> essa parte não deveria estar no cadastro né? só pros usuarios
                 if (entidade.Classificacao < 10)
                     notificationResult.Add(new NotificationError("Classificação inválida. Digite um número de 0 a 10.", NotificationErrorType.BUSINESS_RULES));
@@ -60,11 +57,6 @@ namespace WhereTo.Servico.Servicos
         public IEnumerable<Estabelecimento> ListarTodos()
         {
             return _estabelecimentoRepositorio.ListarTodos();
-        }
-
-        public IEnumerable<Estabelecimento> NomeEstabelecimento()
-        {
-            return _estabelecimentoRepositorio.NomeEstabelecimento();
         }
     }
 }

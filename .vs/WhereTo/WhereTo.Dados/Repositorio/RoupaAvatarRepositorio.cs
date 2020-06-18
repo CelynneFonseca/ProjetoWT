@@ -20,7 +20,7 @@ namespace WhereTo.Dados.Repositorio
         {
             return Contexto
                 .RoupaAvatar
-                .Where(f => f.Local == null);
+                .Where(f => f.Local == 0);
         }
     }
 }
