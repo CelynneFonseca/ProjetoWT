@@ -9,11 +9,11 @@ namespace WhereTo.Dados.Repositorio
 {
     public class LocalEstabelecimentoRepositorio : RepositorioBase<AdmEstabelecimento>
     {
-        public IEnumerable<LocalEstabelecimento> CEPEstabelecimento()
+        public IEnumerable<LocalEstabelecimento> EstabelecimentoID()
         {
             return Contexto
                 .LocalEstabelecimento
-                .Where(f => f.CEPEstabelecimento == null);
+                .Where(f => f.EstabelecimentoID == null);
         }
 
         public IEnumerable<LocalEstabelecimento> RuaEstabelecimento()

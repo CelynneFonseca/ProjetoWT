@@ -17,13 +17,12 @@ namespace WhereTo.Dados.EntityFramework.Contexto
         public DbSet<RoupaAvatar> RoupaAvatar { get; set; }
         public DbSet<Local> Local { get; set; }
         public DbSet<Codigo> Codigo { get; set; }
-        public DbSet<Estabelecimento> Estabelecimento { get; set; }
         public DbSet<LocalEstabelecimento> LocalEstabelecimento { get; set; }
         public DbSet<AdmEstabelecimento> AdmEstabelecimento { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsbuilder)
         {
-            optionsbuilder.UseSqlServer("server=201.62.57.93;database=dbEcommerce;user id=visualstudio;password=visualstud;");
+            optionsbuilder.UseSqlServer("server=201.62.57.93;database=dbLAB_2020;user id=visualstudio;password=visualstud;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -34,7 +33,6 @@ namespace WhereTo.Dados.EntityFramework.Contexto
             modelBuilder.ApplyConfiguration(new RoupaAvatarConfiguracao());
             modelBuilder.ApplyConfiguration(new LocalConfiguracao());
             modelBuilder.ApplyConfiguration(new CodigoConfiguracao());
-            modelBuilder.ApplyConfiguration(new EstabelecimentoConfiguracao());
             modelBuilder.ApplyConfiguration(new LocalEstabelecimentoConfiguracao());
             modelBuilder.ApplyConfiguration(new AdmEstabelecimentoConfiguracao());
         }

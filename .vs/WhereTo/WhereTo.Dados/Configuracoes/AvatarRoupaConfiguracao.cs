@@ -14,7 +14,7 @@ namespace WhereTo.Dados.Configuracoes
         public void Configure(EntityTypeBuilder<AvatarRoupa> builder)
         {
             builder.ToTable("AvatarRoupa");
-            builder.HasKey("AvataID");
+            builder.HasKey("AvatarID");
             builder.HasKey("RoupaID");
             builder.Property(f => f.AvatarID).HasColumnName("AvatarID");
             builder.Property(f => f.RoupaID).HasColumnName("RoupaID");
