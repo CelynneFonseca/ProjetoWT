@@ -8,7 +8,7 @@ namespace WhereTo.Dominio.Entidades
 {
     public class LocalEstabelecimento
     {
-        public string CEPEstabelecimento { get; set; }
+        public int EstabelecimentoID { get; set; }
         public string RuaEstabelecimento { get; set; }
         public int NumeroEstabelecimento { get; set; }
         public string BairroEstabelecimento { get; set; }

@@ -24,9 +24,6 @@ namespace WhereTo.Servico.Servicos
 
             try
             {
-                if (entidade.CEPEstabelecimento.Length < 8)
-                    notificationResult.Add(new NotificationError("CEP Inválido", NotificationErrorType.BUSINESS_RULES));
-
                 if (entidade.RuaEstabelecimento.Length < 4)
                     notificationResult.Add(new NotificationError("Nome da Rua Inválido", NotificationErrorType.BUSINESS_RULES));
 
@@ -64,9 +61,9 @@ namespace WhereTo.Servico.Servicos
             return "";
         }
 
-        public IEnumerable<LocalEstabelecimento> CEPEstabelecimento()
+        public IEnumerable<LocalEstabelecimento> EstabelecimentoID()
         {
-            return _localestabelecimentoRepositorio.CEPEstabelecimento();
+            return _localestabelecimentoRepositorio.EstabelecimentoID();
         }
 
         public IEnumerable<LocalEstabelecimento> RuaEstabelecimento()

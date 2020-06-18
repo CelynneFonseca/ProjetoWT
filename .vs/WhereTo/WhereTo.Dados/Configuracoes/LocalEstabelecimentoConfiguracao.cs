@@ -14,8 +14,8 @@ namespace WhereTo.Dados.Configuracoes
         public void Configure(EntityTypeBuilder<LocalEstabelecimento> builder)
         {
             builder.ToTable("LocalEstabelecimento");
-            builder.HasKey("CEPEstabelecimento");
-            builder.Property(f => f.CEPEstabelecimento).HasColumnName("CEPEstabelecimento");
+            builder.HasKey("EstabelecimentoID");
+            builder.Property(f => f.EstabelecimentoID).HasColumnName("EstabelecimentoID");
             builder.Property(f => f.RuaEstabelecimento).HasColumnName("RuaEstabelecimento");
             builder.Property(f => f.NumeroEstabelecimento).HasColumnName("NumeroEstabelecimento");
             builder.Property(f => f.BairroEstabelecimento).HasColumnName("BairroEstabelecimento");
