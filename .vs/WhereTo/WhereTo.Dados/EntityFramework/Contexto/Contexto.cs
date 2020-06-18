@@ -13,7 +13,6 @@ namespace WhereTo.Dados.EntityFramework.Contexto
     {
         public DbSet<Usuario> Usuario { get; set; }
         public DbSet<Avatar> Avatar { get; set; }
-        public DbSet<AvatarRoupa> AvatarRoupa { get; set; }
         public DbSet<RoupaAvatar> RoupaAvatar { get; set; }
         public DbSet<Local> Local { get; set; }
         public DbSet<Codigo> Codigo { get; set; }
@@ -29,7 +28,6 @@ namespace WhereTo.Dados.EntityFramework.Contexto
         {
             modelBuilder.ApplyConfiguration(new UsuarioConfiguracao());
             modelBuilder.ApplyConfiguration(new AvatarConfiguracao());
-            modelBuilder.ApplyConfiguration(new AvatarRoupaConfiguracao());
             modelBuilder.ApplyConfiguration(new RoupaAvatarConfiguracao());
             modelBuilder.ApplyConfiguration(new LocalConfiguracao());
             modelBuilder.ApplyConfiguration(new CodigoConfiguracao());

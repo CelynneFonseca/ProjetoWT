@@ -19,11 +19,11 @@ namespace WhereTo.Dados.Configuracoes
             builder.Property(f => f.NomeAdm).HasColumnName("NomeAdm");
             builder.Property(f => f.TelefonePrincipal).HasColumnName("TelefonePrincipal");
             builder.Property(f => f.TelefoneSecundario).HasColumnName("TelefoneSecundario");
-            builder.Property(f => f.CEPEstabelecimento).HasColumnName("CEPEstabelecimento");
+            builder.Property(f => f.EstabelecimentoID).HasColumnName("EstabelecimentoID");
 
             builder
                 .HasMany("LocalEstabelecimento")
-                .WithOne("CEPEstabelecimento");
+                .WithOne("EstabelecimentoID");
         }
     }
 }
