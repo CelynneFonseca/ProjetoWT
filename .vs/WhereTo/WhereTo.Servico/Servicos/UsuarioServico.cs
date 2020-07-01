@@ -30,6 +30,9 @@ namespace WhereTo.Servico.Servicos
                 if (entidade.DataNascimento.Date == null)
                     notificationResult.Add(new NotificationError("Data de Nascimento Inválida", NotificationErrorType.BUSINESS_RULES));
 
+                if (entidade.Senha.Length <= 6)
+                    notificationResult.Add(new NotificationError("Senha Inválida", NotificationErrorType.BUSINESS_RULES));
+
                 if (notificationResult.IsValid)
                 {
                     _usuarioRepositorio.Adicionar(entidade);
@@ -60,6 +63,16 @@ namespace WhereTo.Servico.Servicos
         public IEnumerable<Usuario> Nome()
         {
             return _usuarioRepositorio.Nome();
+        }
+
+        public IEnumerable<Usuario> Senha()
+        {
+            return _usuarioRepositorio.Senha();
+        }
+
+        public IEnumerable<Usuario> Email()
+        {
+            return _usuarioRepositorio.Email();
         }
     }
 }

@@ -19,6 +19,7 @@ namespace WhereTo.Dados.Configuracoes
             builder.Property(f => f.Nome).HasColumnName("Nome");
             builder.Property(f => f.Email).HasColumnName("Email");
             builder.Property(f => f.DataNascimento).HasColumnName("DataNascimento");
+            builder.Property(f => f.Senha).HasColumnName("Senha");
         }
     }
 }

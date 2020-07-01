@@ -53,5 +53,10 @@ namespace WhereTo.Servico.Servicos
         {
             return _avatarRepositorio.NomeAvatar(); //Lista os nomes que o avatar já teve.
         }
+
+        public IEnumerable<Avatar> ListarTodos()
+        {
+            return _avatarRepositorio.ListarTodos();
+        }
     }
 }

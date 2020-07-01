@@ -22,11 +22,5 @@ namespace WhereTo.Dados.Repositorio
                 .Where(f => f.Classificacao == 0);
         }
 
-        public IEnumerable<Estabelecimento> NomeEstabelecimento()
-        {
-            return Contexto
-                .Estabelecimento
-                .Where(f => f.NomeEstabelecimento == null);
-        }
     }
 }

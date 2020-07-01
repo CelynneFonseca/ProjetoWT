@@ -41,7 +41,12 @@ namespace WhereTo.Servico.Servicos
             }
         }
 
-        public string Excluir(Usuario entidade)
+        public IEnumerable<Local> ListarTodos()
+        {
+            return _localRepositorio.ListarTodos();
+        }
+
+        public string Excluir(Local entidade)
         {
             return "";
         }

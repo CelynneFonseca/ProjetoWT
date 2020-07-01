@@ -15,27 +15,22 @@ namespace WhereTo.WebApi.Controllers
     {
         private readonly EstabelecimentoServico estabelecimentoServico;
 
-        public EstabelecimentoController()
-        {
-            estabelecimentoServico = new EstabelecimentoServico();
-        }
-
         [HttpGet]
         public IEnumerable<Estabelecimento> ListarTodos()
         {
-            estabelecimentoServico.ListarTodos();
+            return estabelecimentoServico.ListarTodos();
         }
 
         [HttpPost]
         public NotificationResult Salvar(Estabelecimento entidade)
         {
-            return estabelecimentoServico.Salvar();
+            return estabelecimentoServico.Salvar(entidade);
         }
 
         [HttpDelete]
         public string Excluir(Estabelecimento entidade)
         {
-            return estabelecimentoServico.Excluir();
+            return estabelecimentoServico.Excluir(entidade);
         }
     }
 }

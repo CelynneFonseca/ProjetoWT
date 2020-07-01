@@ -16,5 +16,19 @@ namespace WhereTo.Dados.Repositorio
                 .Usuario
                 .Where(f => f.Nome == null);
         }
+
+        public IEnumerable<Usuario> Senha()
+        {
+            return Contexto
+                .Usuario
+                .Where(f => f.Senha == null);
+        }
+
+        public IEnumerable<Usuario> Email()
+        {
+            return Contexto
+                .Usuario
+                .Where(f => f.Email == null);
+        }
     }
 }

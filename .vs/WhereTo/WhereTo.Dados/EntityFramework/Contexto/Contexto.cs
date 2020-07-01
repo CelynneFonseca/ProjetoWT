@@ -18,6 +18,7 @@ namespace WhereTo.Dados.EntityFramework.Contexto
         public DbSet<Codigo> Codigo { get; set; }
         public DbSet<LocalEstabelecimento> LocalEstabelecimento { get; set; }
         public DbSet<AdmEstabelecimento> AdmEstabelecimento { get; set; }
+        public DbSet<Estabelecimento> Estabelecimento { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsbuilder)
         {
@@ -33,6 +34,7 @@ namespace WhereTo.Dados.EntityFramework.Contexto
             modelBuilder.ApplyConfiguration(new CodigoConfiguracao());
             modelBuilder.ApplyConfiguration(new LocalEstabelecimentoConfiguracao());
             modelBuilder.ApplyConfiguration(new AdmEstabelecimentoConfiguracao());
+            modelBuilder.ApplyConfiguration(new EstabelecimentoConfiguracao());
         }
     }
 }

@@ -26,6 +26,11 @@ namespace WhereTo.WebApi.Controllers
             return avatarServico.Nome();
         }
 
+        public IEnumerable<Avatar> ListarTodos()
+        {
+            return avatarServico.ListarTodos();
+        }
+
         [HttpPost]
         public NotificationResult Salvar(Avatar entidade)
         {

@@ -102,5 +102,6 @@ namespace WhereTo.Servico.Servicos
         {
             return _localestabelecimentoRepositorio.PaisEstabelecimento();
         }
+
     }
 }

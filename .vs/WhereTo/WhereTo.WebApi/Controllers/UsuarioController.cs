@@ -26,6 +26,24 @@ namespace WhereTo.WebApi.Controllers
             return usuarioServico.Nome();
         }
 
+        [HttpGet]
+        public IEnumerable<Usuario> Senha()
+        {
+            return usuarioServico.Senha();
+        }
+
+        [HttpGet]
+        public IEnumerable<Usuario> Email()
+        {
+            return usuarioServico.Email();
+        }
+
+        [HttpGet]
+        public IEnumerable<Usuario> ListarTodos()
+        {
+            return usuarioServico.ListarTodos();
+        }
+
         [HttpPost]
         public NotificationResult Salvar(Usuario entidade)
         {

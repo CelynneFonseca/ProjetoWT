@@ -15,5 +15,6 @@ namespace WhereTo.Dominio.Entidades
         [EmailAddress(ErrorMessage = "Invalid Email Address")]
         public string Email { get; set; }
         public DateTime DataNascimento { get; set; }
+        public string Senha { get; set; }
     }
 }
