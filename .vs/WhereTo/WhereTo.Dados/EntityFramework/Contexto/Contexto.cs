@@ -23,7 +23,7 @@ namespace WhereTo.Dados.EntityFramework.Contexto
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsbuilder)
         {
-            optionsbuilder.UseSqlServer("server=201.62.57.93;database=dbLAB_2020;user id=visualstudio;password=visualstud;");
+            optionsbuilder.UseSqlServer("server=201.62.57.93;database=dbLAB_2020;user id=visualstudio;password=visualstudio;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
