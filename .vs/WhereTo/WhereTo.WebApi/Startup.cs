@@ -13,6 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using WhereTo.Dados.Repositorio;
+using WhereTo.Dominio.Entidades;
 using WhereTo.Servico.Servicos;
 
 namespace WhereTo.WebApi
@@ -49,6 +50,9 @@ namespace WhereTo.WebApi
 
             services.AddTransient<LocalEstabelecimentoServico>();
             services.AddTransient<LocalEstabelecimentoRepositorio>();
+
+            services.AddTransient<ItemDetalhesServico>();
+            services.AddTransient<ItemDetalhesRepositorio>();
             
             //services.AddScoped(typeof(RepositorioBase<>));
             

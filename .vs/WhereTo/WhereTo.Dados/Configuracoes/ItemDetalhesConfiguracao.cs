@@ -12,7 +12,8 @@ namespace WhereTo.Dados.Configuracoes
         public void Configure(EntityTypeBuilder<ItemDetalhes> builder)
         {
             builder.ToTable("ItemDetalhes");
-            builder.HasKey("Item_Nome");
+            builder.HasKey("Item_ID");
+            builder.Property(f => f.Item_ID).HasColumnName("Item_ID");
             builder.Property(f => f.Item_Nome).HasColumnName("Item_Nome");
             builder.Property(f => f.Descricao).HasColumnName("Descricao");
             builder.Property(f => f.Item_Preco).HasColumnName("Item_Preco");
