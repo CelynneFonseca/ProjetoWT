@@ -26,7 +26,7 @@ namespace WhereTo.Dados.Repositorio
         {
             return Contexto
                 .ItemDetalhes
-                .Where(f => f.Item_Preco == null);
+                .Where(f => f.Item_Preco < 2);
         }
 
         public IEnumerable<ItemDetalhes> Image_Nome()

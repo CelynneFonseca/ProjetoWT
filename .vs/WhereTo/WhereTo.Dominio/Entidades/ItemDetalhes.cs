@@ -8,7 +8,7 @@ namespace WhereTo.Dominio.Entidades
     {
         public string Item_Nome { get; set; }
         public string Descricao { get; set; }
-        public double Item_Preco { get; set; }
+        public decimal Item_Preco { get; set; }
         public string Image_Nome { get; set; }
     }
 }
